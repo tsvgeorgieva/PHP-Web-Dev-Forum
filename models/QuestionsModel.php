@@ -36,7 +36,7 @@ class QuestionsModel extends BaseModel {
         return $statement->get_result()->fetch_assoc();
     }
 
-    public function createQuestion($title, $content, $username) {
+    public function createQuestion($title, $content, $username, $categoryId) {
         if ($title == '' || $content == '' || $username == '') {
             return false;
         }
@@ -52,8 +52,8 @@ class QuestionsModel extends BaseModel {
         }
 
         $statement = self::$db->prepare(
-            "INSERT INTO questions(title, content, author_id, created_on) VALUES(?, ?, ?, ?)");
-        $statement->bind_param("ssis", $title, $content, intval($user['id']), date("y-m-d H:i:s"));
+            "INSERT INTO questions(title, content, author_id, created_on, category_id) VALUES(?, ?, ?, ?, ?)");
+        $statement->bind_param("ssisi", $title, $content, intval($user['id']), date("y-m-d H:i:s"), $categoryId);
         $statement->execute();
         return $statement->affected_rows > 0;
     }
@@ -81,5 +81,13 @@ class QuestionsModel extends BaseModel {
         $statement->execute();
 
         return $statement->get_result();
+    }
+
+    public function getAllCategories(){
+        $statement = self::$db->query(
+            "SELECT id, name
+            FROM categories
+            ORDER BY name;");
+        return $statement->fetch_all(MYSQLI_ASSOC);
     }
 }

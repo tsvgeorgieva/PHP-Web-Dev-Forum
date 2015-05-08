@@ -19,20 +19,34 @@ class QuestionsController extends BaseController {
     }
 
     public function create() {
+        if(! $this->isLoggedIn){
+            $this->addErrorMessage("Please log in first!");
+            $this->redirectToUrl("/users/login");
+        }
         if ($this->isPost) {
             $title = $_POST['question_title'];
             $content = $_POST['question_content'];
             $username = $this->getUsername();
-            if ($this->db->createQuestion($title, $content, $username)) {
+            $categoryId = $_POST['category_id'];
+            if ($this->db->createQuestion($title, $content, $username, $categoryId)) {
                 $this->addInfoMessage("Question created.");
                 $this->redirect('questions');
             } else {
                 $this->addErrorMessage("Error creating question.");
             }
+        } else {
+            $this->categories = $this->db->getAllCategories();
         }
     }
 
     public function delete($id) {
+        if(! $this->isLoggedIn){
+            $this->addErrorMessage("Please log in first!");
+            $this->redirectToUrl("/users/login");
+        }
+
+        //TODO add validtion if user is author
+
         if ($this->db->deleteQuestion($id)) {
             $this->addInfoMessage("Question deleted.");
         } else {

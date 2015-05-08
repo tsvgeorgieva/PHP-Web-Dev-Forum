@@ -18,6 +18,11 @@ class AnswersController extends BaseController{
     }
 
     public function create() {
+        if(! $this->isLoggedIn){
+            $this->addErrorMessage("Please log in first!");
+            $this->redirectToUrl("/users/login");
+        }
+
         if ($this->isPost) {
             $content = $_POST['answer_content'];
             $questionId = $_SESSION['currentQuestionId'];
@@ -31,6 +36,13 @@ class AnswersController extends BaseController{
     }
 
     public function delete($id) {
+        if(! $this->isLoggedIn){
+            $this->addErrorMessage("Please log in first!");
+            $this->redirectToUrl("/users/login");
+        }
+
+        //TODO add validtion if user is author
+
         if ($this->db->deleteAnswer($id)) {
             $this->addInfoMessage("Answer deleted.");
         } else {
