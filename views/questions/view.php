@@ -43,3 +43,4 @@
         </tr>
     <?php endforeach ?>
 </table>
+<a href="/answers/create">[Add New Answer]</a>

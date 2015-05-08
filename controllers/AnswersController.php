@@ -20,10 +20,10 @@ class AnswersController extends BaseController{
     public function create() {
         if ($this->isPost) {
             $content = $_POST['answer_content'];
-            $questionId = $_POST['answer_questionId'];
-            if ($this->db->createAnswer($content, $questionId)) {
+            $questionId = $_SESSION['currentQuestionId'];
+            if ($this->db->createAnswer($content, $questionId, $this->getUsername())) {
                 $this->addInfoMessage("Answer created.");
-                $this->redirect('questions');
+                $this->redirectToUrl('/questions/view/'. $questionId);
             } else {
                 $this->addErrorMessage("Error creating answer.");
             }

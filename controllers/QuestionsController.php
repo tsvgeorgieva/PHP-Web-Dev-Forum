@@ -15,6 +15,7 @@ class QuestionsController extends BaseController {
     public function view($id) {
         $this->question = $this->db->getById($id);
         $this->answers = $this->db->getAllAnswersForQuestion($id);
+        $_SESSION['currentQuestionId'] = $id;
     }
 
     public function create() {

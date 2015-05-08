@@ -28,8 +28,8 @@ class QuestionsModel extends BaseModel {
                 c.name AS category_name,
                 c.id AS category_id
             FROM questions q
-            JOIN users u ON q.author_id = u.id
-            JOIN categories c ON q.category_id = c.id
+            LEFT JOIN users u ON q.author_id = u.id
+            LEFT JOIN categories c ON q.category_id = c.id
             WHERE q.id = ?;");
         $statement->bind_param("i", intval($id));
         $statement->execute();

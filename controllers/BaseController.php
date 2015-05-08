@@ -72,8 +72,6 @@ abstract class BaseController {
         if($this->isLoggedIn){
             return $_SESSION['username'];
         }
-
-        return false;
     }
 
     function addMessage($msg, $type) {
