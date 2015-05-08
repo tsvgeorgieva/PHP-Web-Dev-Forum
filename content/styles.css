@@ -22,3 +22,11 @@ li.info {
 li.error {
     background: #f77;
 }
+
+#logged-in-info{
+    float:right;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
