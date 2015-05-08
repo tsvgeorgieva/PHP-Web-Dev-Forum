@@ -1,0 +1,48 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Tsvetina
+ * Date: 4.5.2015 г.
+ * Time: 17:16
+ */
+
+class UsersController extends BaseController{
+    private $db;
+
+    public function onInit() {
+        $this->title = "Users";
+        $this->db = new UsersModel();
+    }
+
+    public function register(){
+        if($this->isPost) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            if ($this->db->register($username, $password)) {
+                $_SESSION['username'] = $username;
+                $this->addInfoMessage("Registration successful.");
+                $this->redirect('questions');
+            } else {
+                $this->addErrorMessage("Registration error.");
+            }
+        }
+    }
+
+    public function login(){
+        if($this->isPost) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            if ($this->db->login($username, $password)) {
+                $_SESSION['username'] = $username;
+                $this->addInfoMessage("Login successful.");
+                $this->redirect('questions');
+            } else {
+                $this->addErrorMessage("Login error.");
+            }
+        }
+    }
+
+    public function logout(){
+        unset($_SESSION['username']);
+    }
+}
