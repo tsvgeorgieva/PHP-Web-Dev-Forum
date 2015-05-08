@@ -21,7 +21,8 @@ class QuestionsController extends BaseController {
         if ($this->isPost) {
             $title = $_POST['question_title'];
             $content = $_POST['question_content'];
-            if ($this->db->createQuestion($title, $content)) {
+            $username = $this->getUsername();
+            if ($this->db->createQuestion($title, $content, $username)) {
                 $this->addInfoMessage("Question created.");
                 $this->redirect('questions');
             } else {

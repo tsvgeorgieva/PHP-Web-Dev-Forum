@@ -36,13 +36,24 @@ class QuestionsModel extends BaseModel {
         return $statement->get_result()->fetch_assoc();
     }
 
-    public function createQuestion($title, $content) {
-        if ($title == '' || $content == '') {
+    public function createQuestion($title, $content, $username) {
+        if ($title == '' || $content == '' || $username == '') {
             return false;
         }
+
+        $getUserStatement = self::$db->prepare(
+            "SELECT id FROM users WHERE username = ?");
+        $getUserStatement->bind_param("s",$username);
+        $getUserStatement->execute();
+        $user = $getUserStatement->get_result()->fetch_assoc();
+
+        if(!isset($user['id'])){
+            return false;
+        }
+
         $statement = self::$db->prepare(
-            "INSERT INTO questions(title, content) VALUES(?, ?)");
-        $statement->bind_param("ss", $title, $content);
+            "INSERT INTO questions(title, content, author_id, created_on) VALUES(?, ?, ?, ?)");
+        $statement->bind_param("ssis", $title, $content, intval($user['id']), date("y-m-d H:i:s"));
         $statement->execute();
         return $statement->affected_rows > 0;
     }
