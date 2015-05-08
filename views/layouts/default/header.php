@@ -13,9 +13,12 @@
         <a href="/"><img src="/content/images/site-logo.png"></a>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/authors">Authors</a></li>
-            <li><a href="/books">Books</a></li>
+            <li><a href="/questions">Questions</a></li>
         </ul>
+        <div id="logged-in-info">
+            <span>Hello, username</span>
+            <form action="/users/logout"><input type="submit" value="Logout"/></form>
+        </div>
     </header>
 
     <?php include('messages.php'); ?>
