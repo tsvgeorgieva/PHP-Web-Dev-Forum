@@ -18,6 +18,17 @@ class UsersController extends BaseController{
         if($this->isPost) {
             $username = $_POST['username'];
             $password = $_POST['password'];
+
+            if($username == null || strlen($username) < 6){
+                $this->addErrorMessage("Username should be at least 6 characters");
+                $this->redirect('users','register');
+            }
+
+            if($password == null || strlen($password) < 3){
+                $this->addErrorMessage("Password should be at least 3 characters");
+                $this->redirect('users','register');
+            }
+
             if ($this->db->register($username, $password)) {
                 $_SESSION['username'] = $username;
                 $this->addInfoMessage("Registration successful.");
@@ -44,5 +55,7 @@ class UsersController extends BaseController{
 
     public function logout(){
         unset($_SESSION['username']);
+        $this->isLoggedIn = false;
+        $this->redirect('home');
     }
 }
