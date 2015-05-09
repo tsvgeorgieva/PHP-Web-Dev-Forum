@@ -78,6 +78,24 @@ abstract class BaseController {
         return false;
     }
 
+    public function userIsAuthorToAnswer($answerId){
+        if($this->isLoggedIn){
+            $userDb = new UsersModel();
+            return $userDb->checkIfAuthorToAnswer($this->getUsername(), $answerId);
+        }
+
+        return false;
+    }
+
+    public function userIsAuthorToQuestion($questionId){
+        if($this->isLoggedIn){
+            $userDb = new UsersModel();
+            return $userDb->checkIfAuthorToQuestion($this->getUsername(), $questionId);
+        }
+
+        return false;
+    }
+
     function addMessage($msg, $type) {
         if (!isset($_SESSION['messages'])) {
             $_SESSION['messages'] = array();

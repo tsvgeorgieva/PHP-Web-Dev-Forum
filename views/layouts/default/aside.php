@@ -9,6 +9,6 @@
 <aside id="tags">
     <h2>Tags</h2>
     <p>
-        <a href="/" class="tag-event" id="A2qZKSFuQ7" style="margin: 5px; font-size: 16px;">HTML</a>
+        <a href="/">HTML</a>
     </p>
 </aside>

@@ -1,6 +1,6 @@
 <?php
 
-define('DEFAULT_CONTROLLER', 'home');
+define('DEFAULT_CONTROLLER', 'questions');
 define('DEFAULT_ACTION', 'index');
 define('DEFAULT_LAYOUT', 'default');
 

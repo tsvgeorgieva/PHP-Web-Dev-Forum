@@ -21,9 +21,6 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/questions">Questions</a>
-                </li>
-                <li>
                     <a href="/questions/create">Ask Question</a>
                 </li>
                 <?php if($this->isLoggedIn) : ?>
@@ -33,7 +30,7 @@
                         </a>
                     </li>
                     <li id="logoutLi">
-                        <a href="#/logout/" id="logoutAtag">Logout</a>
+                        <a href="/users/logout" id="logoutAtag">Logout</a>
                     </li>
                 <?php else : ?>
                     <li id="loginLi">

@@ -31,6 +31,11 @@
                     <span><?= htmlspecialchars($answer['created_on']) ?></span>
                 </div>
                 <p><?= htmlspecialchars($answer['content']) ?></p>
+                <?php if($this->userIsAuthorToAnswer($answer['id'])) : ?>
+                    <form action="/answers/delete/<?= $answer['id']?>" method="post">
+                        <input type="submit" value="Delete"/>
+                    </form>
+                <?php endif;?>
             </li>
             <?php endforeach ?>
         </ul>

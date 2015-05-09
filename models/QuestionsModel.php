@@ -13,7 +13,7 @@ class QuestionsModel extends BaseModel {
             FROM questions q
             LEFT JOIN users u ON q.author_id = u.id
             LEFT JOIN categories c ON q.category_id = c.id
-            ORDER BY q.created_on;");
+            ORDER BY q.created_on DESC;");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
