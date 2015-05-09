@@ -43,6 +43,8 @@ abstract class BaseController {
             }
             include_once($viewFileName);
             if ($includeLayout) {
+                $asideFile = 'views/layouts/' . $this->layoutName . '/aside.php';
+                include_once($asideFile);
                 $footerFile = 'views/layouts/' . $this->layoutName . '/footer.php';
                 include_once($footerFile);
             }
