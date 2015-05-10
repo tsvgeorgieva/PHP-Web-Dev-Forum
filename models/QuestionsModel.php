@@ -36,7 +36,7 @@ class QuestionsModel extends BaseModel {
         return $statement->get_result()->fetch_assoc();
     }
 
-    public function createQuestion($title, $content, $username, $categoryId) {
+    public function createQuestion($title, $content, $username, $categoryId, $tagsArray) {
         if ($title == '' || $content == '' || $username == '') {
             return false;
         }
@@ -50,12 +50,27 @@ class QuestionsModel extends BaseModel {
         if(!isset($user['id'])){
             return false;
         }
-
+        self::$db->begin_transaction();
         $statement = self::$db->prepare(
             "INSERT INTO questions(title, content, author_id, created_on, category_id) VALUES(?, ?, ?, ?, ?)");
         $statement->bind_param("ssisi", $title, $content, intval($user['id']), date("y-m-d H:i:s"), $categoryId);
         $statement->execute();
-        return $statement->affected_rows > 0;
+        if($statement->affected_rows == 0){
+            self::$db->rollback();
+            return false;
+        }
+
+        $questionId = $statement->insert_id;
+
+        foreach($tagsArray as $tagName){
+            if(! $this->createQuestionTags($questionId, $tagName)){
+                self::$db->rollback();
+                return false;
+            }
+        }
+        
+        self::$db->commit();
+        return true;
     }
 
     public function deleteQuestion($id) {
@@ -89,5 +104,20 @@ class QuestionsModel extends BaseModel {
             FROM categories
             ORDER BY name;");
         return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function createQuestionTags($questionId, $tagName){
+        $tagDb = new TagsModel();
+        if(! $tagDb->checkIfExists($tagName)){
+            if(! $tagDb->create($tagName)){
+                return false;
+            }
+        }
+
+        $tagId = $tagDb->getByName($tagName);
+        $statement = self::$db->prepare("INSERT INTO questions_tags (tag_id, question_id) VALUES (?, ?);");
+        $statement->bind_param("ii", intval($tagId), intval($questionId));
+        $statement->execute();
+        return $statement->affected_rows > 0;
     }
 }
