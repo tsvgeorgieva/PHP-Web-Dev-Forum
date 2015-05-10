@@ -1,7 +1,10 @@
 <?php if($this->hasQuestion) : ?>
     <article class="small-question" data-id="<?= $this->question['id'] ?>">
         <header>
-            <a href="/" class="small-question-category"><?= htmlspecialchars($this->question['category_name']) ?></a>
+            <div class="small-question-category">
+                <span>Category:</span>
+                <a href="/"> <?= htmlspecialchars($this->question['category_name']) ?></a>
+            </div>
             <h2 class="small-question-title">
                 <a href="/questions/view/<?= htmlspecialchars($this->question['id']) ?>">
                     <?= htmlspecialchars($this->question['title']) ?>
@@ -29,7 +32,7 @@
             </p>
         </footer>
     </article>
-    <ul data-type="answersToQuestion">
+    <ul class="answersToQuestion" data-type="answersToQuestion">
         <?php foreach ($this->answers as $answer) : ?>
         <li data-type="answer" data-id="<?= htmlspecialchars($answer['id']) ?>">
             <div class="post-info">
@@ -48,9 +51,13 @@
         <?php endforeach ?>
     </ul>
     <?php if($this->isLoggedIn) :?>
-    <form method="post" action="/answers/create">
-        <textarea id="answer-content-input" name="answer_content"></textarea>
-        <input id="add-answer-btn" type="submit" value="Add new answer">
-    </form>
+        <form method="post" action="/answers/create">
+            <textarea id="answer-content-input" name="answer_content"></textarea>
+            <input id="add-answer-btn" type="submit" value="Add new answer">
+        </form>
+        <?php else : ?>
+        <form>
+            <p>To post an answer, please <a href="/users/login">Login</a>.</p>
+        </form>
     <?php endif; ?>
 <?php endif; ?>
