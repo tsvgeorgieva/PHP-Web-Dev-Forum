@@ -9,10 +9,12 @@ class QuestionsModel extends BaseModel {
                 u.username AS author_name,
                 u.id AS author_id,
                 c.name AS category_name,
-                c.id AS category_id
+                c.id AS category_id,
+                count(v.id) AS visits
             FROM questions q
             LEFT JOIN users u ON q.author_id = u.id
             LEFT JOIN categories c ON q.category_id = c.id
+            LEFT JOIN question_visits v ON v.question_id = q.id
             ORDER BY q.created_on DESC;");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
@@ -25,10 +27,12 @@ class QuestionsModel extends BaseModel {
                 q.created_on,
                 u.username AS author_name,
                 c.name AS category_name,
-                c.id AS category_id
+                c.id AS category_id,
+                count(v.id) AS visits
             FROM questions q
             LEFT JOIN users u ON q.author_id = u.id
             LEFT JOIN categories c ON q.category_id = c.id
+            LEFT JOIN question_visits v ON v.question_id = q.id
             WHERE q.id = ?;");
         $statement->bind_param("i", intval($id));
         $statement->execute();
@@ -124,5 +128,15 @@ class QuestionsModel extends BaseModel {
         return $statement->affected_rows > 0;
     }
 
-    
+    public function addVisit($questionId, $userId){
+        if($userId == null){
+            $statement = self::$db->prepare("INSERT INTO question_visits(question_id, datetime) VALUES(?,?)");
+            $statement->bind_param("is", intval($questionId), date("y-m-d H:i:s"));
+        }else{
+            $statement = self::$db->prepare("INSERT INTO question_visits(question_id, user_id, datetime) VALUES(?,?,?)");
+            $statement->bind_param("iis", intval($questionId), intval($userId), date("y-m-d H:i:s"));
+        }
+        $statement->execute();
+        return $statement->affected_rows > 0;
+    }
 }

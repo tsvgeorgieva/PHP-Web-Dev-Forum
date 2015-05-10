@@ -20,7 +20,7 @@
                     Author: <?= htmlspecialchars($question['author_name']) ?>
                 </a>
                 <span><?= htmlspecialchars($question['created_on']) ?></span>
-                <span class="small-question-visits">Visits: 10</span>
+                <span class="small-question-visits">Visits: <?= htmlspecialchars($question['visits'])?></span>
             </div>
         </header>
     </article>

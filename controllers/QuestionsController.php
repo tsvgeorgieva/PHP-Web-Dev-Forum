@@ -22,6 +22,14 @@ class QuestionsController extends BaseController {
             $this->answers = $this->db->getAllAnswersForQuestion($id);
             $this->title = $this->question['title'];
             $_SESSION['currentQuestionId'] = $id;
+            $username = $this->getUsername();
+            if($username){
+                $userDb = new UsersModel();
+                $userId = $userDb->getByUsername($username);
+            } else {
+                $userId = NULL;
+            }
+            $this->db->addVisit($id, $userId);
         }
     }
 

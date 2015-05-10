@@ -14,7 +14,7 @@
 <body class="body">
 
     <header class="mainHeader">
-        <a href="#/"><img src="/content/images/pin.png"></a>
+        <a href="/"><img src="/content/images/pin.png"></a>
         <nav>
             <ul>
 

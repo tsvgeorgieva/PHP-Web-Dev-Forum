@@ -10,7 +10,7 @@
             <div class="post-info">
                 <a href="/users/profile/<?= htmlspecialchars($this->question['author_name']) ?>" class="small-question-author">Author: <?= htmlspecialchars($this->question['author_name']) ?></a>
                 <span><?= htmlspecialchars($this->question['created_on']) ?></span>
-                <span class="small-question-visits">Visits: 10</span>
+                <span class="small-question-visits">Visits: <?= htmlspecialchars($this->question['visits'])?></span>
             </div>
         </header>
         <main>
