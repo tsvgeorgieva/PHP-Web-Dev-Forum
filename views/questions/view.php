@@ -1,6 +1,4 @@
-
-    <main class="content">
-        <article class="small-question" data-id="<?= $this->question['id'] ?>">
+<article class="small-question" data-id="<?= $this->question['id'] ?>">
             <header>
                 <a href="/" class="small-question-category"><?= htmlspecialchars($this->question['category_name']) ?></a>
                 <h2 class="small-question-title">
@@ -45,4 +43,4 @@
             <input id="add-answer-btn" type="submit" value="Add new answer">
         </form>
         <?php endif; ?>
-    </main>
+

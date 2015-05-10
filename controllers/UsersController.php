@@ -55,7 +55,8 @@ class UsersController extends BaseController{
 
     public function logout(){
         unset($_SESSION['username']);
+        $this->addInfoMessage("Logout successful.");
         $this->isLoggedIn = false;
-        $this->redirect('/');
+        $this->redirectToUrl('/');
     }
 }

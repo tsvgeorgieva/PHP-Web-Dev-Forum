@@ -1,4 +1,4 @@
-<main class="content">
+
 <?php foreach ($this->questions as $question) : ?>
     <article class="small-question" data-id="<?= $question['id'] ?>">
         <header>
@@ -26,4 +26,4 @@
         </footer>
     </article>
 <?php endforeach ?>
-</main>
+

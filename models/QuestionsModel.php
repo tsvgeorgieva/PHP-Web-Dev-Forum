@@ -68,7 +68,7 @@ class QuestionsModel extends BaseModel {
                 return false;
             }
         }
-        
+
         self::$db->commit();
         return true;
     }
