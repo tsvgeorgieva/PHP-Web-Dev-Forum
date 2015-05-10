@@ -1,5 +1,9 @@
-
-<?php foreach ($this->questions as $question) : ?>
+<?php if(count($this->questions) == 0 ) :?>
+<form>
+    <p>There are no questions right now. Would you like to <a href="/questions/create">ask a question</a>?</p>
+</form>
+<?php else : ?>
+<?php  foreach ($this->questions as $question) : ?>
     <article class="small-question" data-id="<?= $question['id'] ?>">
         <header>
             <div class="small-question-category">
@@ -20,5 +24,5 @@
             </div>
         </header>
     </article>
-<?php endforeach ?>
-
+<?php endforeach; ?>
+<?php endif; ?>

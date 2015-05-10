@@ -124,4 +124,5 @@ class QuestionsModel extends BaseModel {
         return $statement->affected_rows > 0;
     }
 
+    
 }

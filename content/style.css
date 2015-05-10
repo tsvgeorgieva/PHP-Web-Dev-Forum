@@ -202,9 +202,6 @@ main > form > textarea{
 	width: 100%;
 	border-radius: 5px;
 }
-main > ul{
-
-}
 
 main > ul > li{
 	background-color: #CEEFFD;
@@ -278,7 +275,7 @@ li.message{
     text-align: center;
     border-radius: 25px;
     border: 1px solid black;
-    margin-bottom: 10px;
+    margin : 0 0 10px 0;
 }
 
 li.error{

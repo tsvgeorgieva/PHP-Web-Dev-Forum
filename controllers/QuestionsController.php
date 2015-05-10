@@ -14,11 +14,19 @@ class QuestionsController extends BaseController {
 
     public function view($id) {
         $this->question = $this->db->getById($id);
-        $this->answers = $this->db->getAllAnswersForQuestion($id);
-        $_SESSION['currentQuestionId'] = $id;
+        if(! isset($this->question['title'])){
+            $this->hasQuestion = false;
+            $this->addErrorMessage("No such question");
+        } else{
+            $this->hasQuestion = true;
+            $this->answers = $this->db->getAllAnswersForQuestion($id);
+            $this->title = $this->question['title'];
+            $_SESSION['currentQuestionId'] = $id;
+        }
     }
 
     public function create() {
+        $this->title = "Ask Question";
         if(! $this->isLoggedIn){
             $this->addErrorMessage("Please log in first!");
             $this->redirectToUrl("/users/login");
