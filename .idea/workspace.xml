@@ -25,120 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/questions/view.php">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23943663" vertical-offset="102" max-vertical-offset="1054">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.26333907" vertical-offset="0" max-vertical-offset="581">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/answers/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionsModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/QuestionsModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.384615" vertical-offset="589" max-vertical-offset="2499">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-              <folding>
-                <marker date="1431264216079" expanded="true" signature="131:635" placeholder="SELECT q.id,..questions..." />
-                <marker date="1431264216079" expanded="true" signature="788:1272" placeholder="SELECT q.id,..questions..." />
-                <marker date="1431264216079" expanded="true" signature="1479:1652" placeholder="SELECT t.nam..questions..." />
-                <marker date="1431264216079" expanded="true" signature="2143:2182" placeholder="SELECT id FR..users..." />
-                <marker date="1431264216079" expanded="true" signature="2506:2601" placeholder="INSERT INTO ..." />
-                <marker date="1431264216079" expanded="true" signature="3268:3302" placeholder="DELETE FROM ..." />
-                <marker date="1431264216079" expanded="true" signature="3554:3812" placeholder="SELECT a.id,..answers..." />
-                <marker date="1431264216079" expanded="true" signature="4285:4347" placeholder="INSERT INTO ..." />
-                <marker date="1431264216079" expanded="true" signature="4637:4699" placeholder="INSERT INTO ..." />
-                <marker date="1431264216079" expanded="true" signature="4847:4920" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/QuestionsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="119" max-vertical-offset="1445">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="31" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/questions/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="561">
-              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layouts/default/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3846154" vertical-offset="184" max-vertical-offset="918">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/users/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4505" max-vertical-offset="7157">
-              <caret line="277" column="24" selection-start-line="277" selection-start-column="24" selection-end-line="277" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="918">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/UsersModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.192307" vertical-offset="252" max-vertical-offset="1241">
-              <caret line="40" column="33" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="33" />
-              <folding>
-                <marker date="1431260424116" expanded="true" signature="249:295" placeholder="SELECT COUNT..users..." />
-                <marker date="1431260424116" expanded="true" signature="677:732" placeholder="INSERT INTO ..." />
-                <marker date="1431260424116" expanded="true" signature="1020:1084" placeholder="SELECT id, u..users..." />
-                <marker date="1431260424116" expanded="true" signature="1482:1520" placeholder="SELECT * FRO..users..." />
-                <marker date="1431260424116" expanded="true" signature="1781:1905" placeholder="SELECT COUNT..answers..." />
-                <marker date="1431260424116" expanded="true" signature="2247:2375" placeholder="SELECT COUNT..questions..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +45,6 @@
         <option value="$PROJECT_DIR$/controllers/TestController.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/models/AnswersModel.php" />
-        <option value="$PROJECT_DIR$/includes/config.php" />
         <option value="$PROJECT_DIR$/models/CategoriesModel.php" />
         <option value="$PROJECT_DIR$/views/layouts/default/footer.php" />
         <option value="$PROJECT_DIR$/views/layouts/default/messages.php" />
@@ -173,6 +64,7 @@
         <option value="$PROJECT_DIR$/views/layouts/default/header.php" />
         <option value="$PROJECT_DIR$/models/QuestionsModel.php" />
         <option value="$PROJECT_DIR$/views/questions/view.php" />
+        <option value="$PROJECT_DIR$/includes/config.php" />
       </list>
     </option>
   </component>
@@ -342,6 +234,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP-Web-Dev-Forum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP-Web-Dev-Forum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -488,16 +394,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1683">
           <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
-            <marker date="1431264216079" expanded="true" signature="131:635" placeholder="SELECT q.id,..questions..." />
-            <marker date="1431264216079" expanded="true" signature="788:1272" placeholder="SELECT q.id,..questions..." />
-            <marker date="1431264216079" expanded="true" signature="1479:1652" placeholder="SELECT t.nam..questions..." />
-            <marker date="1431264216079" expanded="true" signature="2143:2182" placeholder="SELECT id FR..users..." />
-            <marker date="1431264216079" expanded="true" signature="2506:2601" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="3268:3302" placeholder="DELETE FROM ..." />
-            <marker date="1431264216079" expanded="true" signature="3554:3812" placeholder="SELECT a.id,..answers..." />
-            <marker date="1431264216079" expanded="true" signature="4285:4347" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="4637:4699" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="4847:4920" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT q.id,..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT q.id,..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT t.nam..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT id FR..users..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT a.id,..answers..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -555,12 +461,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="303" max-vertical-offset="1122">
           <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
           <folding>
-            <marker date="1431260424116" expanded="true" signature="249:295" placeholder="SELECT COUNT..users..." />
-            <marker date="1431260424116" expanded="true" signature="677:732" placeholder="INSERT INTO ..." />
-            <marker date="1431260424116" expanded="true" signature="1020:1084" placeholder="SELECT id, u..users..." />
-            <marker date="1431260424116" expanded="true" signature="1482:1520" placeholder="SELECT * FRO..users..." />
-            <marker date="1431260424116" expanded="true" signature="1781:1905" placeholder="SELECT COUNT..answers..." />
-            <marker date="1431260424116" expanded="true" signature="2247:2375" placeholder="SELECT COUNT..questions..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..users..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT id, u..users..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..answers..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..questions..." />
           </folding>
         </state>
       </provider>
@@ -585,16 +491,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="592" max-vertical-offset="1683">
           <caret line="55" column="111" selection-start-line="55" selection-start-column="111" selection-end-line="55" selection-end-column="111" />
           <folding>
-            <marker date="1431264216079" expanded="true" signature="131:635" placeholder="SELECT q.id,..questions..." />
-            <marker date="1431264216079" expanded="true" signature="788:1272" placeholder="SELECT q.id,..questions..." />
-            <marker date="1431264216079" expanded="true" signature="1479:1652" placeholder="SELECT t.nam..questions..." />
-            <marker date="1431264216079" expanded="true" signature="2143:2182" placeholder="SELECT id FR..users..." />
-            <marker date="1431264216079" expanded="true" signature="2506:2601" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="3268:3302" placeholder="DELETE FROM ..." />
-            <marker date="1431264216079" expanded="true" signature="3554:3812" placeholder="SELECT a.id,..answers..." />
-            <marker date="1431264216079" expanded="true" signature="4285:4347" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="4637:4699" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="4847:4920" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT q.id,..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT q.id,..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT t.nam..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT id FR..users..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT a.id,..answers..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -688,14 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="272">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -837,7 +735,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4505" max-vertical-offset="7157">
+        <state vertical-scroll-proportion="0.34343433" vertical-offset="4505" max-vertical-offset="7157">
           <caret line="277" column="24" selection-start-line="277" selection-start-column="24" selection-end-line="277" selection-end-column="24" />
           <folding />
         </state>
@@ -845,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="918">
+        <state vertical-scroll-proportion="0.40963855" vertical-offset="204" max-vertical-offset="918">
           <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="83" />
           <folding />
         </state>
@@ -853,7 +751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/QuestionsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="119" max-vertical-offset="1445">
+        <state vertical-scroll-proportion="0.52667814" vertical-offset="119" max-vertical-offset="1445">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="31" selection-end-column="46" />
           <folding />
         </state>
@@ -861,7 +759,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/questions/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="561">
+        <state vertical-scroll-proportion="0.6437177" vertical-offset="0" max-vertical-offset="581">
           <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="103" />
           <folding />
         </state>
@@ -877,22 +775,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/UsersModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.192307" vertical-offset="252" max-vertical-offset="1241">
+        <state vertical-scroll-proportion="0.5903614" vertical-offset="252" max-vertical-offset="1241">
           <caret line="40" column="33" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="33" />
           <folding>
-            <marker date="1431260424116" expanded="true" signature="249:295" placeholder="SELECT COUNT..users..." />
-            <marker date="1431260424116" expanded="true" signature="677:732" placeholder="INSERT INTO ..." />
-            <marker date="1431260424116" expanded="true" signature="1020:1084" placeholder="SELECT id, u..users..." />
-            <marker date="1431260424116" expanded="true" signature="1482:1520" placeholder="SELECT * FRO..users..." />
-            <marker date="1431260424116" expanded="true" signature="1781:1905" placeholder="SELECT COUNT..answers..." />
-            <marker date="1431260424116" expanded="true" signature="2247:2375" placeholder="SELECT COUNT..questions..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..users..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT id, u..users..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..answers..." />
+            <marker date="1431260424116" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..questions..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/layouts/default/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3846154" vertical-offset="184" max-vertical-offset="918">
+        <state vertical-scroll-proportion="0.151463" vertical-offset="184" max-vertical-offset="918">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding />
         </state>
@@ -900,19 +798,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/QuestionsModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.384615" vertical-offset="589" max-vertical-offset="2499">
+        <state vertical-scroll-proportion="0.41996557" vertical-offset="589" max-vertical-offset="2499">
           <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
           <folding>
-            <marker date="1431264216079" expanded="true" signature="131:635" placeholder="SELECT q.id,..questions..." />
-            <marker date="1431264216079" expanded="true" signature="788:1272" placeholder="SELECT q.id,..questions..." />
-            <marker date="1431264216079" expanded="true" signature="1479:1652" placeholder="SELECT t.nam..questions..." />
-            <marker date="1431264216079" expanded="true" signature="2143:2182" placeholder="SELECT id FR..users..." />
-            <marker date="1431264216079" expanded="true" signature="2506:2601" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="3268:3302" placeholder="DELETE FROM ..." />
-            <marker date="1431264216079" expanded="true" signature="3554:3812" placeholder="SELECT a.id,..answers..." />
-            <marker date="1431264216079" expanded="true" signature="4285:4347" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="4637:4699" placeholder="INSERT INTO ..." />
-            <marker date="1431264216079" expanded="true" signature="4847:4920" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT q.id,..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT q.id,..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT t.nam..questions..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT id FR..users..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="SELECT a.id,..answers..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431264216079" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -921,6 +819,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23943663" vertical-offset="102" max-vertical-offset="1054">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26333907" vertical-offset="0" max-vertical-offset="581">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
