@@ -154,6 +154,15 @@ p.small-question-content {
 .small-question-category {
     float: right;
 }
+
+.small-question > footer > form > input {
+    float: right;
+    background-color: lightskyblue;
+    padding: 6px;
+    border: none;
+    border-radius: 15px;
+}
+
 main.large-question > header{
 	background-color: #FFF;
 	border-radius: 5px;

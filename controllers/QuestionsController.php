@@ -34,8 +34,6 @@ class QuestionsController extends BaseController {
             } else {
                 $this->addErrorMessage("Error creating question.");
             }
-        } else {
-            $this->categories = $this->db->getAllCategories();
         }
     }
 
@@ -45,7 +43,9 @@ class QuestionsController extends BaseController {
             $this->redirectToUrl("/users/login");
         }
 
-        //TODO add validtion if user is author
+        if(! $this->userIsAuthorToQuestion($id)){
+            $this->addErrorMessage("You cannot delete this question.");
+        }
 
         if ($this->db->deleteQuestion($id)) {
             $this->addInfoMessage("Question deleted.");
