@@ -46,9 +46,8 @@ class QuestionsModel extends BaseModel {
             WHERE q.id = ?;");
         $getTagsStatement->bind_param("i", intval($id));
         $getTagsStatement->execute();
-        $tags = $getTagsStatement->get_result()->fetch_assoc();
+        $tags = $getTagsStatement->get_result()->fetch_all(MYSQL_ASSOC);
         $result['tags'] = $tags;
-
         return $result;
     }
 

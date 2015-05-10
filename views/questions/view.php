@@ -24,7 +24,7 @@
             <?php endif;?>
             <p>
                 <?php foreach($this->question['tags'] as $tag) : ?>
-                    <a href="/"><?= htmlspecialchars($tag)?></a>
+                    <a href="/"><?= htmlspecialchars($tag['name'])?></a>
                 <?php endforeach; ?>
             </p>
         </footer>
