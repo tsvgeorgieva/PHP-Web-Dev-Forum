@@ -59,4 +59,8 @@ class UsersController extends BaseController{
         $this->isLoggedIn = false;
         $this->redirectToUrl('/');
     }
+
+    public function profile($username){
+
+    }
 }

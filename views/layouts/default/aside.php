@@ -13,9 +13,7 @@
     <h2>Tags</h2>
     <p>
         <?php foreach($this->getAllTags() as $tag) : ?>
-    <li>
-        <a href="/"><?= htmlspecialchars($tag['name'])?></a>
-    </li>
-    <?php endforeach; ?>
+            <a href="/"><?= htmlspecialchars($tag['name'])?></a>
+        <?php endforeach; ?>
     </p>
 </aside>

@@ -24,7 +24,6 @@ class QuestionsModel extends BaseModel {
                 q.content,
                 q.created_on,
                 u.username AS author_name,
-                u.id AS author_id,
                 c.name AS category_name,
                 c.id AS category_id
             FROM questions q
@@ -33,7 +32,20 @@ class QuestionsModel extends BaseModel {
             WHERE q.id = ?;");
         $statement->bind_param("i", intval($id));
         $statement->execute();
-        return $statement->get_result()->fetch_assoc();
+        $result = $statement->get_result()->fetch_assoc();
+
+        $getTagsStatement = self::$db->prepare(
+            "SELECT t.name
+            FROM questions q
+            JOIN questions_tags qt ON q.id = qt.question_id
+            JOIN tags t ON t.id = qt.tag_id
+            WHERE q.id = ?;");
+        $getTagsStatement->bind_param("i", intval($id));
+        $getTagsStatement->execute();
+        $tags = $getTagsStatement->get_result()->fetch_assoc();
+        $result['tags'] = $tags;
+
+        return $result;
     }
 
     public function createQuestion($title, $content, $username, $categoryId, $tagsArray) {
@@ -86,8 +98,7 @@ class QuestionsModel extends BaseModel {
             "SELECT a.id,
                 a.content,
                 a.created_on,
-                u.username AS author_name,
-                u.id AS author_id
+                u.username AS author_name
             FROM answers a
             LEFT JOIN users u ON a.user_id = u.id
             WHERE a.question_id = ?

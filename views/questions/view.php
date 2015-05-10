@@ -16,12 +16,16 @@
                 <p class="small-question-content"><?= htmlspecialchars($this->question['content']) ?></p>
             </main>
             <footer>
-                <?php if($this->userIsAuthorToQuestion($question['id'])) : ?>
-                    <form action="/questions/delete/<?= $question['id']?>" method="post">
+                <?php if($this->userIsAuthorToQuestion($this->question['id'])) : ?>
+                    <form action="/questions/delete/<?= $this->question['id']?>" method="post">
                         <input type="submit" value="Delete"/>
                     </form>
                 <?php endif;?>
-                <a href="/">*tags*</a>
+                <p>
+                    <?php foreach($this->question['tags'] as $tag) : ?>
+                        <a href="/"><?= htmlspecialchars($tag)?></a>
+                    <?php endforeach; ?>
+                </p>
             </footer>
         </article>
         <ul data-type="answersToQuestion">

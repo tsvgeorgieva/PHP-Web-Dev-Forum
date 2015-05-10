@@ -8,9 +8,10 @@ class TagsModel extends BaseModel{
 
     public function checkIfExists($name){
         $statement = self::$db->prepare("SELECT COUNT(id) FROM tags WHERE name = ?");
-        $statement->bind_params("s", $name);
+        $statement->bind_param("s", $name);
         $statement->execute();
-        $result = $statement->get_result()->fetch_all();
+        $result = $statement->get_result()->fetch_assoc();
+        var_dump($result);
         return $result['COUNT(id)'] > 0;
     }
 
@@ -20,16 +21,16 @@ class TagsModel extends BaseModel{
         }
 
         $statement = self::$db->prepare("INSERT INTO tags(name) VALUES (?)");
-        $statement->bind_params("s", $name);
+        $statement->bind_param("s", $name);
         $statement->execute();
         return $statement->affected_rows > 0;
     }
 
     public function getByName($name){
         $statement = self::$db->prepare("SELECT id FROM tags WHERE name = ?");
-        $statement->bind_params("s", $name);
+        $statement->bind_param("s", $name);
         $statement->execute();
-        $result = $statement->get_result()->fetch_all();
+        $result = $statement->get_result()->fetch_assoc();
         return $result['id'];
     }
 

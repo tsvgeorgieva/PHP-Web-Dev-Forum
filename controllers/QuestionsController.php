@@ -28,7 +28,14 @@ class QuestionsController extends BaseController {
             $content = $_POST['question_content'];
             $username = $this->getUsername();
             $categoryId = $_POST['category_id'];
-            if ($this->db->createQuestion($title, $content, $username, $categoryId)) {
+            $tagsString = $_POST['question_tags'];
+            $tagsArray = explode(", ", $tagsString);
+            if($title == '' || $content == '' || count($tagsArray) == 0){
+                $this->addErrorMessage("Please fill out all fields to create question.");
+                return;
+            }
+
+            if ($this->db->createQuestion($title, $content, $username, $categoryId, $tagsArray)) {
                 $this->addInfoMessage("Question created.");
                 $this->redirect('questions');
             } else {

@@ -2,7 +2,10 @@
 <?php foreach ($this->questions as $question) : ?>
     <article class="small-question" data-id="<?= $question['id'] ?>">
         <header>
-            <a href="/" class="small-question-category"><?= htmlspecialchars($question['category_name']) ?></a>
+            <div class="small-question-category">
+                <span>Category:</span>
+                <a href="/"> <?= htmlspecialchars($question['category_name']) ?></a>
+            </div>
             <h2 class="small-question-title">
                 <a href="/questions/view/<?= htmlspecialchars($question['id']) ?>">
                     <?= htmlspecialchars($question['title']) ?>
@@ -16,14 +19,6 @@
                 <span class="small-question-visits">Visits: 10</span>
             </div>
         </header>
-        <footer>
-            <?php if($this->userIsAuthorToQuestion($question['id'])) : ?>
-                <form action="/questions/delete/<?= $question['id']?>" method="post">
-                    <input type="submit" value="Delete"/>
-                </form>
-            <?php endif;?>
-            <a href="/">*tags*</a>
-        </footer>
     </article>
 <?php endforeach ?>
 
