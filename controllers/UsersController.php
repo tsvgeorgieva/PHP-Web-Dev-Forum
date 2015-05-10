@@ -16,12 +16,13 @@ class UsersController extends BaseController{
 
     public function register(){
         $this->title = "Register";
+
         if($this->isPost) {
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            if($username == null || strlen($username) < 6){
-                $this->addErrorMessage("Username should be at least 6 characters");
+            if($username == null || strlen($username) < 5){
+                $this->addErrorMessage("Username should be at least 5 characters");
                 $this->redirect('users','register');
             }
 
@@ -42,13 +43,16 @@ class UsersController extends BaseController{
 
     public function login(){
         $this->title = "Login";
+
         if($this->isPost) {
             $username = $_POST['username'];
             $password = $_POST['password'];
+
             if ($this->db->login($username, $password)) {
                 $_SESSION['username'] = $username;
+
                 $this->addInfoMessage("Login successful.");
-                $this->redirect('questions');
+                $this->redirectToUrl('/');
             } else {
                 $this->addErrorMessage("Login error.");
             }

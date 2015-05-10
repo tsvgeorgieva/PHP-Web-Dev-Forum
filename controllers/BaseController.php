@@ -57,8 +57,7 @@ abstract class BaseController {
         die;
     }
 
-    public function redirect(
-            $controllerName, $actionName = null, $params = null) {
+    public function redirect($controllerName, $actionName = null, $params = null) {
         $url = '/' . urlencode($controllerName);
         if ($actionName != null) {
             $url .= '/' . urlencode($actionName);
@@ -78,6 +77,16 @@ abstract class BaseController {
         return false;
     }
 
+    public function getAllCategories(){
+        $categoriesDb = new CategoriesModel();
+        return $categoriesDb->getAll();
+    }
+
+    public function getAllTags(){
+        $tagsDb = new TagsModel();
+        return $tagsDb->getAll();
+    }
+
     public function userIsAuthorToAnswer($answerId){
         if($this->isLoggedIn){
             $userDb = new UsersModel();
@@ -94,16 +103,6 @@ abstract class BaseController {
         }
 
         return false;
-    }
-
-    public function getAllCategories(){
-        $categoriesDb = new CategoriesModel();
-        return $categoriesDb->getAll();
-    }
-
-    public function getAllTags(){
-        $tagsDb = new TagsModel();
-        return $tagsDb->getAll();
     }
 
     function addMessage($msg, $type) {

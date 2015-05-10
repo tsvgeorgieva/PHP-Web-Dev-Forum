@@ -6,6 +6,14 @@ class CategoriesModel extends BaseModel{
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getByName($name){
+        $statement = self::$db->prepare("SELECT id FROM categories WHERE name = ?");
+        $statement->bind_param("s", $name);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        return $result['id'];
+    }
+
     public function checkIfExists($name){
         $statement = self::$db->prepare("SELECT COUNT(id) FROM categories WHERE name = ?");
         $statement->bind_params("s", $name);

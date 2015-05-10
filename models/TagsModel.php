@@ -6,6 +6,14 @@ class TagsModel extends BaseModel{
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getByName($name){
+        $statement = self::$db->prepare("SELECT id FROM tags WHERE name = ?");
+        $statement->bind_param("s", $name);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        return $result['id'];
+    }
+
     public function checkIfExists($name){
         $statement = self::$db->prepare("SELECT COUNT(id) FROM tags WHERE name = ?");
         $statement->bind_param("s", $name);
@@ -25,13 +33,4 @@ class TagsModel extends BaseModel{
         $statement->execute();
         return $statement->affected_rows > 0;
     }
-
-    public function getByName($name){
-        $statement = self::$db->prepare("SELECT id FROM tags WHERE name = ?");
-        $statement->bind_param("s", $name);
-        $statement->execute();
-        $result = $statement->get_result()->fetch_assoc();
-        return $result['id'];
-    }
-
 }

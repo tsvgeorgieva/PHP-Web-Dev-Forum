@@ -14,14 +14,19 @@ class QuestionsController extends BaseController {
 
     public function view($id) {
         $this->question = $this->db->getById($id);
+        // check if valid question id
         if(! isset($this->question['title'])){
             $this->hasQuestion = false;
             $this->addErrorMessage("No such question");
         } else{
             $this->hasQuestion = true;
+
             $this->answers = $this->db->getAllAnswersForQuestion($id);
             $this->title = $this->question['title'];
+
             $_SESSION['currentQuestionId'] = $id;
+
+            // add visit
             $username = $this->getUsername();
             if($username){
                 $userDb = new UsersModel();
@@ -35,17 +40,19 @@ class QuestionsController extends BaseController {
 
     public function create() {
         $this->title = "Ask Question";
+
         if(! $this->isLoggedIn){
             $this->addErrorMessage("Please log in first!");
             $this->redirectToUrl("/users/login");
         }
+
         if ($this->isPost) {
             $title = $_POST['question_title'];
             $content = $_POST['question_content'];
-            $username = $this->getUsername();
             $categoryId = $_POST['category_id'];
-            $tagsString = $_POST['question_tags'];
-            $tagsArray = explode(", ", $tagsString);
+            $tagsArray = explode(", ", $_POST['question_tags']);
+            $username = $this->getUsername();
+
             if($title == '' || $content == '' || count($tagsArray) == 0){
                 $this->addErrorMessage("Please fill out all fields to create question.");
                 return;
@@ -75,6 +82,6 @@ class QuestionsController extends BaseController {
         } else {
             $this->addErrorMessage("Cannot delete question.");
         }
-        $this->redirect('questions');
+        $this->redirectToUrl('/');
     }
 }
