@@ -35,6 +35,11 @@
     <ul class="answersToQuestion" data-type="answersToQuestion">
         <?php foreach ($this->answers as $answer) : ?>
         <li data-type="answer" data-id="<?= htmlspecialchars($answer['id']) ?>">
+            <?php if($this->userIsAuthorToAnswer($answer['id'])) : ?>
+                <form action="/answers/delete/<?= $answer['id']?>" method="post">
+                    <input type="submit" value="Delete"/>
+                </form>
+            <?php endif;?>
             <div class="post-info">
                 <a href="/users/profile/<?= htmlspecialchars($answer['author_name']) ?>" class="small-question-author">
                     Author: <?= htmlspecialchars($answer['author_name']) ?>
@@ -42,11 +47,6 @@
                 <span><?= htmlspecialchars($answer['created_on']) ?></span>
             </div>
             <p><?= htmlspecialchars($answer['content']) ?></p>
-            <?php if($this->userIsAuthorToAnswer($answer['id'])) : ?>
-                <form action="/answers/delete/<?= $answer['id']?>" method="post">
-                    <input type="submit" value="Delete"/>
-                </form>
-            <?php endif;?>
         </li>
         <?php endforeach ?>
     </ul>

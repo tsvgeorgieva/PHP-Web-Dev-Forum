@@ -7,14 +7,9 @@
  */
 
 class AnswersController extends BaseController{
-    private $db;
-
     public function onInit() {
         $this->title = "Answers";
         $this->db = new AnswersModel();
-    }
-
-    public function index() {
     }
 
     public function create() {
